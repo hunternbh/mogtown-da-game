@@ -1,11 +1,12 @@
-// Classroom obfuscation, not secure authentication. Keep private source data and codes out of Git.
+// Classroom obfuscation, not secure authentication. Group codes are printed in
+// the instructor guide; future release codes and private source data stay out of Git.
 'use strict';
 const $ = (selector) => document.querySelector(selector);
 const SESSION_KEY = 'mogtown.session.v1';
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
 const state = {
-  manifest: null, role: null, roleCode: '', common: {}, private: {},
+  manifest: null, rolePlans: [], role: null, roleCode: '', common: {}, private: {},
   unlocked: new Set([1]), roundCodes: {}, activeRound: 1, busy: false
 };
 const roundNames = {1: 'Descriptive', 2: 'Diagnostic', 3: 'Predictive', 4: 'Prescriptive', 5: 'Final reveal'};
@@ -72,7 +73,7 @@ function previewRole() {
 }
 function showGame() {
   const role = state.role;
-  const briefing = state.private[1];
+  const plan = state.rolePlans.find((item) => item.id === role.id);
   $('#loginPanel').classList.add('hidden');
   $('#game').classList.remove('hidden');
   $('#logoutBtn').classList.remove('hidden');
@@ -80,11 +81,14 @@ function showGame() {
   document.body.dataset.role = role.id;
   $('#sessionStatus').textContent = role.name;
   $('#roleName').textContent = role.name;
-  $('#roleBrief').textContent = briefing.briefing || '';
-  $('#roleMission').innerHTML = `<strong>Your mission:</strong> ${escapeHtml(briefing.mission)}`;
+  $('#roleBrief').textContent = plan.character;
+  $('#roleMission').innerHTML = `<strong>Your end goal:</strong> ${escapeHtml(plan.goal)}<p><strong>Each round:</strong> Read the evidence, discuss your answer, then prepare a 30-second statement for the class.</p><a href="worksheet.html?role=${encodeURIComponent(role.id)}" target="_blank" rel="noopener">Open your group worksheet</a>`;
   $('#roleAvatar').src = `assets/${roleArt[role.id][0]}`;
   $('#roleAvatar').alt = `${role.name} representative`;
   $('#roleCode').value = '';
+  const url = new URL(location.href);
+  url.searchParams.set('role', role.id);
+  history.replaceState(null, '', url);
   updateNavigation();
 }
 function updateNavigation() {
@@ -122,7 +126,7 @@ async function login(event) {
   if (state.busy) return;
   const role = state.manifest.roles.find((item) => item.id === $('#roleSelect').value);
   const code = $('#roleCode').value.trim().toLowerCase();
-  if (!role || !code) return setMessage($('#loginMessage'), 'Choose an organization and enter its private access code.', 'error');
+  if (!role || !code) return setMessage($('#loginMessage'), 'Choose an organization and enter its group access code.', 'error');
   busy(true);
   setMessage($('#loginMessage'), 'Opening your confidential briefing…');
   try {
@@ -161,8 +165,11 @@ function renderRound(round) {
   if (privateData.clueTitle || privateData.clue || privateData.table) html += `<div class="callout confidential-callout"><p class="tag">CONFIDENTIAL • YOUR TEAM</p><h3>${escapeHtml(privateData.clueTitle || 'Your evidence')}</h3><p>${escapeHtml(privateData.clue || '')}</p>${dataTable(privateData.table, `${state.role.name} evidence`)}</div>`;
   if (privateData.scenario) html += `<div class="callout scenario"><strong>YOUR NUMERICAL SCENARIO</strong><p>${escapeHtml(privateData.scenario)}</p></div>`;
   if (round === 2) html += '<div class="callout truth-rule"><strong>MOGTOWN TRUTH RULE</strong><p>You may selectively disclose and strategically frame evidence. You may not invent data or contradict an unlocked metric. If directly asked about an unlocked metric, answer truthfully.</p></div>';
-  const tasks = [...(common.tasks || []), ...(privateData.tasks || [])];
-  if (tasks.length) html += `<section class="team-task"><p class="eyebrow">DISCUSS → CALCULATE → RECORD</p><h3>Your team task</h3><ol class="task-list">${tasks.map((task) => `<li>${escapeHtml(task)}</li>`).join('')}</ol></section>`;
+  const plan = state.rolePlans.find((item) => item.id === state.role.id);
+  const question = round === 5 ? plan.final : plan[`round${round}`];
+  const publicPrompt = round === 5 ? 'Tell the class whether your recommendation changed and which new evidence mattered.' : 'Choose your main point and one supporting fact. Prepare to share it in 30 seconds.';
+  const answerPrompt = round === 5 ? 'Revise your answer in the same Round 4 box. Explain what changed, or why your recommendation still stands.' : 'Answer your group’s question using the released evidence. Include your calculation or reasoning.';
+  html += `<section class="team-task"><p class="eyebrow">READ → DISCUSS → ANSWER → SHARE</p><h3>${round === 5 ? 'Update your Round 4 response' : 'Your group’s question'}</h3><p class="group-question">${escapeHtml(question)}</p><p>${round === 5 ? 'Use the same two Round 4 boxes on your worksheet.' : 'Complete just two boxes on your worksheet. Work out your answer first, then choose what to tell the class.'}</p><div class="response-grid"><section class="callout response-card"><h4>What we tell the whole class</h4><p>${publicPrompt}</p></section><section class="callout response-card"><h4>Our answer for this round</h4><p>${answerPrompt}</p></section></div></section>`;
   $('#roundContent').innerHTML = html;
   renderFeed(round);
 }
@@ -254,6 +261,8 @@ async function restoreSession(saved) {
 async function init() {
   if (!globalThis.crypto?.subtle) throw new Error('Web Crypto needs localhost or HTTPS.');
   state.manifest = await fetchJson('data/manifest.json');
+  state.rolePlans = await fetchJson('worksheet-prompts.json');
+  if (!Array.isArray(state.rolePlans) || !state.manifest.roles.every((role) => state.rolePlans.some((plan) => plan.id === role.id && ['character', 'case', 'goal', 'round1', 'round2', 'round3', 'round4', 'final'].every((key) => typeof plan[key] === 'string')))) throw new Error('Group instructions are unavailable.');
   state.common[1] = await fetchJson(state.manifest.common.round1);
   $('#roleSelect').innerHTML = '<option value="">Choose your organization</option>' + state.manifest.roles.map((role) => `<option value="${escapeHtml(role.id)}">${escapeHtml(role.name)}</option>`).join('');
   $('#loginForm').addEventListener('submit', login);
@@ -262,7 +271,13 @@ async function init() {
   $('#logoutBtn').addEventListener('click', logout);
   document.querySelectorAll('.round-tab').forEach((button) => button.addEventListener('click', () => switchRound(Number(button.dataset.round))));
   const saved = readSession();
-  if (saved) await restoreSession(saved);
+  const requestedRole = new URLSearchParams(location.search).get('role');
+  const hasRequestedRole = state.manifest.roles.some((role) => role.id === requestedRole);
+  if (hasRequestedRole) {
+    $('#roleSelect').value = requestedRole;
+    previewRole();
+  }
+  if (saved && (!hasRequestedRole || saved.role === requestedRole)) await restoreSession(saved);
   busy(false);
 }
 init().catch(() => {

@@ -58,11 +58,8 @@
     }
   ],
   "tasks": [
-    "Record 3 observations supported by a specific public or confidential metric.",
-    "Show 2 calculations. Label units and distinguish percent changes from percentage-point changes.",
-    "Identify 1 strange pattern in the data.",
-    "Write 1 unanswered question.",
-    "Do not claim causes yet: describe what happened."
+    "What we tell the whole class: prepare a short statement based on your unlocked evidence.",
+    "Our answer for this round: answer the role-specific task using your released game data."
   ],
   "callout": "Fictional classroom data. Opening comparisons are 2026 → 2027. Public industry sales are recognized revenue; role dashboards label gross order values separately. Return rates use orders/units, not dollars. A percentage-point change and a percent change are different."
 }

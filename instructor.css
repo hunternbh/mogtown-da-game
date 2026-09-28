@@ -1,20 +1,20 @@
 @import url("print.css");
-.instructor-page { font-size: 10.5pt; line-height: 1.15; }
-.instructor-page > p { margin: 8px 0; }
-.instructor-page h2 { font-size: 12pt; margin: 12px 0 5px; }
-.instructor-page .page-header h1 { font-size: 20pt; }
-.setup-groups { display: grid; grid-template-columns: 1fr 1.05fr; gap: 22px; }
-.setup-groups ol { padding-left: 17px; margin: 0; }
-.setup-groups li { margin: 0 0 7px; padding-left: 2px; }
-.group-list { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
-.group-list td { padding: 3px 0; vertical-align: top; border-bottom: 1px solid #000; }
-.group-list td:first-child { width: 18px; }
-.group-list td:last-child strong { display: block; }
-.schedule { width: 100%; border-collapse: collapse; }
-.schedule th, .schedule td { text-align: left; vertical-align: top; border: 1px solid #000; padding: 6px 7px; }
-.schedule th { font-size: 10pt; }
-.schedule td:first-child { width: 1.2in; font-weight: 700; }
+.instructor-page { font-size: 11pt; line-height: 1.12; }
+.instructor-page h2 { font-size: 11pt; margin: 9px 0 5px; }
+.instructor-page .page-header h1 { font-size: 15pt; }
+.instructor-page p { margin: 5px 0; }
+.instructor-page ol { padding-left: 18px; margin: 5px 0; }
+.instructor-page li { margin: 4px 0; padding-left: 2px; }
+.instructor-page .website { margin-top: 7px; }
+.instructor-page .routine { margin: 6px 0 9px; }
+.group-list { width: 100%; border-collapse: collapse; font-size: 11pt; table-layout: fixed; }
+.group-list th, .group-list td { padding: 5px 6px; text-align: left; vertical-align: top; border: 1px solid #000; }
+.group-list th:first-child { width: 1.9in; }
+.group-list th:nth-child(2) { width: 1.28in; }
+.group-list td:last-child { overflow-wrap: anywhere; }
+.schedule { width: 100%; border-collapse: collapse; font-size: 11pt; }
+.schedule th, .schedule td { text-align: left; vertical-align: top; border: 1px solid #000; padding: 5px 6px; }
+.schedule td:first-child { width: 1.25in; font-weight: 700; }
 .schedule td:nth-child(2) { width: .45in; white-space: nowrap; }
-.instructor-page .truth-rule { font-size: 10pt; margin: 11px 0 8px; }
-.instructor-page .closing { font-size: 10pt; }
-@media screen and (max-width: 600px) { .setup-groups { grid-template-columns: 1fr; }.schedule { font-size: 9pt; } }
+.instructor-page .truth-rule { margin: 7px 0 5px; }
+.instructor-page .closing { margin-top: 6px; }

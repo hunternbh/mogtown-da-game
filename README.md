@@ -2,40 +2,51 @@
 
 Seven organizations. Four rounds. One question: **Why are sales exploding while profits are falling?**
 
-MogTown is a mobile-first classroom simulation for undergraduate Accounting Information Systems / Data Analytics. Teams assemble incomplete evidence, question each other's interpretations, calculate forecasts, and defend decisions. TrendTok is the shared fictional news feed, not a team.
+MogTown is a mobile-first, 60-minute classroom simulation for undergraduate Accounting Information Systems / Data Analytics. Teams use different evidence to describe events, test explanations, forecast outcomes, and recommend action. TrendTok is the shared fictional news feed, not a team.
 
 - **Game:** https://hunternbh.github.io/mogtown-da-game/
 - **Repository:** https://github.com/hunternbh/mogtown-da-game
 - **Printable instructor guide:** [instructor.html](instructor.html) or [one-page PDF](print/mogtown-instructor-guide.pdf)
 - **Seven group worksheets:** [choose a group](worksheet.html) or [all seven versions as a PDF](print/mogtown-seven-group-worksheets.pdf)
-- **Public facilitator guide:** [FACILITATOR_GUIDE.md](FACILITATOR_GUIDE.md)
+- **Facilitation notes:** [FACILITATOR_GUIDE.md](FACILITATOR_GUIDE.md)
 
-## Run a class
+## Run a class in 60 minutes
 
-1. Assign the seven organizations: GlowLab, JawMax Labs, MirrorAI, PrimeEra AI, CloutHouse, MogTown Consumer Protection Agency, and Mayor's Economic Council.
-2. Give each team its private role code from your local `instructor/instructor-secrets.txt`. Codes use an organization prefix plus four digits (`organization-####`). Do not publish or project the role-code list.
-3. Students open the game on one phone per team, choose their organization, and enter its code. Their confidential briefing and Round 1 open together.
-4. Release the shared Round 2, Round 3, and Round 4 codes in order. Students enter each code on their device. Each unlock adds the public TrendTok update and their organization's private evidence.
-5. Hear recommendations before releasing the final reveal code. Ask teams whether the new evidence changes their decision.
+1. Divide the class into seven roughly equal groups: GlowLab, JawMax Labs, MirrorAI, PrimeEra AI, CloutHouse, MogTown Consumer Protection Agency, and Mayor's Economic Council.
+2. Give each group its matching worksheet and role access code from the instructor guide. Use one phone or computer and a calculator per group. Assign an analyst, recorder, spokesperson, and questioner; combine jobs in smaller groups.
+3. Students choose their organization and enter its code. The role briefing and Round 1 open together. A team-specific link, such as `index.html?role=glowlab`, preselects the organization and still requires its code.
+4. Release the shared Round 2, Round 3, and Round 4 codes in order. Each team enters the code on its own device.
+5. In every round, complete exactly two worksheet boxes: **Our answer** and **Our public class statement**. Allow each group 30 seconds to share its statement, within that round's time.
+6. Release the final reveal after initial recommendations. Teams update the same Round 4 boxes using the new evidence, then hand in their worksheets.
+
+| Stage | Time | Question |
+| --- | --- | --- |
+| Setup | 5 min | Read the case, character, and end goal; log in. |
+| 1 · Descriptive | 10 min | What happened? |
+| 2 · Diagnostic | 12 min | Why might it have happened? |
+| 3 · Predictive | 12 min | What is likely to happen next? |
+| 4 · Prescriptive | 12 min | What should we do? |
+| Final reveal and update | 9 min | Does the new evidence change our recommendation? |
+
+The four rounds use eight answer boxes per group in total. The final update does not add another section or set of boxes. Round times include the seven 30-second public statements.
 
 **MogTown Truth Rule:** Teams may frame or selectively disclose unlocked evidence. They may not fabricate data or contradict an unlocked metric. Direct questions about unlocked metrics require truthful answers.
 
-| Round | Question | Team output | Suggested time |
-| --- | --- | --- | --- |
-| 1 · Descriptive | What happened? | 3 observations, 2 calculations, 1 strange pattern, 1 unanswered question | 10 min |
-| 2 · Diagnostic | Why might it happen? | Hypothesis, evidence, alternative explanation, missing causal evidence | 15 min |
-| 3 · Predictive | What is likely next? | Calculation, assumption, key driver, uncertainty | 12 min |
-| 4 · Prescriptive | What should we do? | Action, evidence, expected result, trade-off, KPIs | 13 min |
+## Sessions and printable materials
 
-Allow 5 minutes for login, 5 minutes for recommendation preparation, and 20–30 minutes for the hearing and final reveal. PrimeEra AI is a healthy-aging and presentation service for older consumers; comparisons across organizations require attention to different customers, product mixes, and channels.
+The selected role and successfully unlocked rounds are restored after a refresh in the same browser tab using session storage. Use **Switch team** to log out before giving a device to another group. A new tab or browser may require the codes again; browser session restoration behavior can vary. If session storage is unavailable, play can continue in the current page, but a refresh may lose progress.
 
-## Student sessions and printable materials
+Each group worksheet includes the shared case, its character and end goal, and two empty boxes per round. There are no name/date fields or separate final-reveal boxes. Students write on the printed sheets; the worksheet page does not store answers. The instructor page is a printable guide to allocation, access codes, timing, and facilitation.
 
-The selected role and successfully unlocked rounds are restored after a refresh in the same browser tab using session storage. Use the game's **Switch team** control to log out before giving the device to a different team. A new tab or browser may require the codes again; browser session restoration behavior can vary. If session storage is unavailable, play can continue in the current page, but a refresh may lose progress.
+Printable pages use black text and borders on white paper, with Calibri as the preferred font. The PDFs embed Calibri. Print on Letter paper at 100% scale, or fit to page for A4. Turn off browser headers and footers when printing HTML. The worksheet PDF follows the group order above, with two pages per group (14 pages total).
 
-The instructor page is a concise, one-page guide to group allocation, timing, round releases, and facilitation. It replaces the timer console. Choose an organization on the worksheet page to print its two-page version, or print all seven groups together (14 pages). Each version includes role-specific instructions and empty boxes for handwritten answers. The worksheets refer to evidence released in the game and contain no answers, private codes, or unreleased numerical evidence.
+## Access codes and private materials
 
-Both pages use simple black text and borders on white paper, with Calibri as the preferred font. The downloadable PDFs embed Calibri for consistent printing on other devices. Print on Letter paper at 100% scale, or fit to page for A4. When printing the HTML pages, turn off the browser's headers and footers. The PDF worksheet pack follows the group order above: pages 1-2 for GlowLab through pages 13-14 for the Mayor's Economic Council.
+The instructor HTML guide and instructor PDF intentionally publish the seven group role access codes for classroom setup. Anyone who reads those guides can use a group's code to open its role briefing; role selection is a classroom access step, not a security boundary. The worksheets and this README contain no actual codes.
+
+Future round and final reveal codes remain in the local, Git-ignored `instructor/` folder. Release only the shared code for the current stage. The folder also contains editable private clue sources, the full facilitator debrief, an arithmetic answer key, and encryption maintenance tools. Keep a separate private backup: cloning the public repository does not recover that kit.
+
+Do not force-add the instructor folder or copy private source JSON into `data/`. Private role and future-round payloads use AES-GCM with browser-native Web Crypto: role briefings use the role code; future public updates use a round code; future role evidence uses both; the final update uses its reveal code. **This is classroom obfuscation, not high-security authentication.** The browser retains the access information needed to restore the current session.
 
 ## Local preview
 
@@ -47,26 +58,15 @@ From the repository folder, run:
 python -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open `http://localhost:8000/`. Use localhost for local testing, or HTTPS on a deployed host; opening `index.html` directly through `file://` will not work reliably with Fetch and Web Crypto. The loopback binding keeps the local preview on your computer, including the ignored private instructor files.
+Open `http://localhost:8000/`. Use localhost for testing or HTTPS when deployed; opening `index.html` through `file://` will not reliably support Fetch and Web Crypto. The loopback binding keeps the local preview, including ignored instructor files, on your computer.
 
 ## GitHub Pages deployment
 
 1. Push the public project files to `hunternbh/mogtown-da-game`, branch `main`.
-2. In the GitHub repository, open **Settings → Pages**.
-3. Choose **Deploy from a branch**, then **main** and **/ (root)**, and save.
-4. After deployment completes, share `https://hunternbh.github.io/mogtown-da-game/`.
+2. In **Settings → Pages**, choose **Deploy from a branch**, **main**, and **/ (root)**.
+3. After deployment completes, share `https://hunternbh.github.io/mogtown-da-game/`.
 
-The `.nojekyll` file keeps this a plain static site. Relative asset and data URLs work under the repository subpath.
-
-Before each class, check a login, each round release, and the final reveal using your private codes. Test again after changing encrypted content. Private maintenance scripts and an arithmetic answer key are provided only in the local, ignored `instructor/` folder.
-
-## Private instructor materials
-
-The entire `instructor/` directory is excluded from Git. It contains the role/round codes, spoiler-filled facilitator guide, editable content sources, arithmetic answer key, and encryption maintenance tools. These files are intentionally absent from the public repository. Keep a separate private backup; cloning the public repository does not recover the instructor kit.
-
-Do not force-add the directory, copy private source JSON into `data/`, or include plaintext clue answers in public documentation. The root `FACILITATOR_GUIDE.md` is safe to publish and explains facilitation without revealing future evidence.
-
-Private role and future-round payloads use AES-GCM with browser-native Web Crypto. Role briefings use the role code; later public updates use a round code; later role evidence uses both. The final update requires its reveal code. **This is classroom obfuscation, not high-security authentication.** The app retains the access information needed to restore the current session in the browser; do not use this design for sensitive real-world data.
+The `.nojekyll` file keeps this a plain static site. Relative asset and data URLs work under the repository subpath. After content changes, test all group logins, sequential round unlocks, the final reveal, and the publication audit before class.
 
 ## File map
 
@@ -74,10 +74,9 @@ Private role and future-round payloads use AES-GCM with browser-native Web Crypt
 - `assets/*.png` — supplied game and organization artwork.
 - `data/manifest.json` — public role names and payload paths.
 - `data/common/round1.json` — opening public TrendTok content.
-- `data/common/*.enc.json`, `data/roles/*.enc.json` — encrypted updates and confidential role content.
-- `worksheet.html`, `worksheet.js`, `worksheet-prompts.json` — seven printable group versions with empty answer boxes.
-- `instructor.html`, `instructor.css`, `instructor.js` — concise printable facilitation instructions.
-- `print.css` — shared Calibri, black-and-white print layout.
-- `print/*.pdf` — one-page instructor guide and 14-page worksheet pack with embedded Calibri.
-- `FACILITATOR_GUIDE.md` — public, spoiler-free facilitation instructions.
-- `instructor/` — ignored private teaching and maintenance materials.
+- `data/common/*.enc.json`, `data/roles/*.enc.json` — encrypted updates and role content.
+- `worksheet.html`, `worksheet.js`, `worksheet-prompts.json` — seven group worksheets, each with eight blank boxes.
+- `instructor.html`, `instructor.css`, `instructor.js` — printable facilitation guide, including group role codes.
+- `print.css`, `print/*.pdf` — shared print styling and downloadable instructor/worksheet PDFs.
+- `FACILITATOR_GUIDE.md` — public facilitation notes without codes or unreleased evidence.
+- `instructor/` — ignored future release codes, private content, and teaching/maintenance materials.

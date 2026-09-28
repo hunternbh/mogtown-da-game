@@ -1,66 +1,48 @@
-# Facilitating MogTown
+# Facilitating MogTown in 60 minutes
 
-MogTown asks students to connect descriptive, diagnostic, predictive, and prescriptive analytics in a shared decision. Seven teams hold different evidence and incentives; every team completes every round. All organizations, creators, products, and events are fictional.
+Seven teams investigate why sales are rising while profits fall. Every team completes four analytics rounds using different evidence and incentives. TrendTok is the shared fictional news feed, not an eighth team.
 
-This public guide contains no private codes or unreleased clues. The local ignored `instructor/FACILITATOR_GUIDE.md` provides the instructor's full story and debrief notes.
+This public guide contains no actual codes or unreleased evidence. The printable instructor HTML and PDF intentionally contain all seven group role access codes. Future round and final reveal codes remain in the local, ignored instructor kit.
 
-## Prepare
+## Prepare the seven groups
 
-- Assign one organization to each team. TrendTok is everyone's shared feed, not an eighth organization.
-- Use one phone or computer per team and a calculator. Print the matching two-page version from the [seven group worksheets](worksheet.html), or use the [complete worksheet PDF](print/mogtown-seven-group-worksheets.pdf).
-- Distribute each private role code separately from your local instructor kit. Keep future round and final codes for release during class.
-- Print the [one-page instructor instructions](instructor.html) for the group allocation and stage-by-stage plan. Use a classroom clock to manage the suggested timings.
-- Test the game over HTTPS or a local HTTP server, never by opening `index.html` directly as a file.
+Divide the class into seven roughly equal groups: GlowLab, JawMax Labs, MirrorAI, PrimeEra AI, CloutHouse, MogTown Consumer Protection Agency, and Mayor's Economic Council.
 
-## Establish the Truth Rule
+Give each group its matching [worksheet](worksheet.html) and role access code from the [instructor guide](instructor.html). The [complete worksheet PDF](print/mogtown-seven-group-worksheets.pdf) has two pages per group. Use one phone or computer and a calculator per group. Assign an analyst, recorder, spokesperson, and questioner; combine jobs in small groups.
 
-Teams may selectively disclose or strategically frame unlocked information. They may challenge an interpretation or keep confidential evidence to themselves. They may not invent data or contradict an unlocked metric, and must answer a direct question about an unlocked metric truthfully.
+Have teams read the worksheet's case, character, and end goal. Students choose their organization and enter its role code. A team-specific link can preselect the organization, but it still requires the code. Confirm that every team has opened its briefing and Round 1.
 
-Ask teams to identify which claims are observations, which are inferences, and what remains unknown. The objective is a defensible decision, not finding one villain.
+## Use the same two boxes every round
 
-## Run all four rounds
+Each round has **Our answer** and **Our public class statement**. Teams answer the round's question using their unlocked evidence, then prepare the statement they will share. Give each team 30 seconds to speak within the round's allotted time. Seven statements take three and a half minutes, so call time on discussion early enough to hear everyone.
 
-Allow five minutes for role selection and briefing. Each team's private role code also opens Round 1.
+Keep the worksheets simple: eight boxes per group across four rounds, with no name/date fields. The final reveal is an update to the existing Round 4 boxes, not another worksheet section.
 
-| Activity | Time | Required output |
+| Stage | Time | Teacher action |
 | --- | --- | --- |
-| Round 1 · Descriptive | 10 min | 3 observations, 2 calculations, 1 strange pattern, 1 unanswered question |
-| Round 2 · Diagnostic | 15 min | 1 hypothesis, supporting evidence, an alternative explanation, missing causal evidence |
-| Round 3 · Predictive | 12 min | Numerical forecast, assumption, key driver, reason it could be wrong |
-| Round 4 · Prescriptive | 13 min | Action, evidence, expected result, trade-off, 2–3 KPIs |
-| Recommendation preparation | 5 min | A concise recommendation with its strongest evidence and main uncertainty |
-| Final hearing and reveal | 20–30 min | A decision update tied to new evidence |
+| Setup | 5 min | Assign groups, materials, jobs, and role codes; check logins. |
+| 1 · Descriptive | 10 min | Ask what happened. Keep observations separate from explanations. Teams answer, then share for 30 seconds each. |
+| 2 · Diagnostic | 12 min | Release Round 2. Ask why it might have happened. Encourage an evidence-based explanation with appropriate uncertainty; hear each statement. |
+| 3 · Predictive | 12 min | Release Round 3. Ask what is likely next. Check the scenario calculation and its assumptions; hear each statement. |
+| 4 · Prescriptive | 12 min | Release Round 4. Ask what to do. Encourage a justified action and an acknowledged trade-off; hear each recommendation. |
+| Final reveal and update | 9 min | Release the final code after recommendations. Teams revise or reaffirm their recommendation in the same Round 4 boxes, explaining the new evidence. Collect worksheets. |
 
-For Rounds 2–4, announce the matching shared code. Each team enters it in sequence on its own device. Check that both the public update and confidential evidence are available before starting the timer.
+Release shared codes sequentially; each team enters the current code on its own device. Check that the public update and private role evidence have unlocked before starting the round. Do not distribute the full future-code list.
 
-In Round 1, stop premature causal explanations: “What do you observe, and how did you calculate it?” Distinguish percentage changes from percentage-point differences and label units and denominators.
+## Keep the hearing truthful
 
-In Round 2, give each team a 60-second briefing followed by one focused cross-question. Seven briefings and seven questions take most of the 15-minute block; keep questions brief or extend the session. Ask for a metric that could test an interpretation, not a performance of confidence.
+**MogTown Truth Rule:** Teams may selectively disclose or strategically frame unlocked evidence. They may not invent data or contradict an unlocked metric. Direct questions about unlocked metrics must be answered truthfully.
 
-In Round 3, have students show the arithmetic and identify the assumption most likely to fail. A scenario result is conditional, not a guarantee.
+The objective is a defensible decision. Challenge a causal claim by asking what else could explain the pattern. Check populations and denominators before comparing percentages. Encourage teams to distinguish a common problem from a widely discussed one, and to recognize uncertainty in forecasts.
 
-In Round 4, allow the menu actions or a well-supported custom proposal. Ask who benefits, who bears the costs, and which measurable result would trigger a revision.
+## Close and assess
 
-## Hear recommendations, then reveal
+After the reveal, ask: **Does your recommendation change? What new evidence caused the change?** A decision that stays the same still needs an explanation. Teams update their Round 4 answer and public statement boxes; no additional boxes are required.
 
-Have every team state its recommendation before releasing the final reveal code. After teams read the new update, ask: **Does your recommendation change? What new evidence caused the change?** Keeping the same recommendation also requires an explanation.
+Collect the worksheets. Assess accurate use of evidence, separation of fact from inference, a forecast with clear assumptions, and a justified decision that acknowledges trade-offs and responds to new evidence. Reward careful reasoning over confidence or dramatic accusations.
 
-Useful debrief questions:
+## Recover a session
 
-- Which conclusions are descriptive facts, and which need additional causal evidence?
-- Could age, product mix, or acquisition channel explain a comparison?
-- Is a widely discussed complaint necessarily a common complaint?
-- Are two percentages based on the same population and denominator?
-- Which forecast is most sensitive to a changed assumption?
-- Which proposal balances competing objectives most clearly?
-- What evidence would make your team change its decision next time?
+A refresh in the same tab restores the role and unlocked rounds when session storage is available. If progress is lost, reissue the group's role code and only the shared codes already released. Use **Switch team** before transferring a device to a different group.
 
-## Assess the reasoning
-
-Score each area from 0–2: accurate use of evidence, separation of facts and causal claims, transparent forecast assumptions, and a justified decision with trade-offs and KPIs. An uncertainty stated clearly is stronger than a confident claim the evidence cannot support. Reward thoughtful updates after the reveal.
-
-## Classroom recovery
-
-A refresh in the same tab restores the role and unlocked rounds when session storage is available. If a team loses progress, privately reissue its role code and the shared codes already released. Use **Switch team** to log out before transferring a device between teams.
-
-Students write answers in the printed worksheet boxes; the worksheet page does not store responses. If a code fails, check the selected role or next round and ask the team to re-enter the code exactly. Do not post the entire instructor code sheet to solve a single login issue.
+Worksheet answers are handwritten and are not stored by the webpage. If a code fails, check the selected organization or next round and re-enter the code exactly. The local ignored `instructor/FACILITATOR_GUIDE.md` contains the full private debrief.
