@@ -6,8 +6,8 @@ MogTown is a mobile-first classroom simulation for undergraduate Accounting Info
 
 - **Game:** https://hunternbh.github.io/mogtown-da-game/
 - **Repository:** https://github.com/hunternbh/mogtown-da-game
-- **Instructor console:** [instructor.html](instructor.html)
-- **Printable team worksheet:** [worksheet.html](worksheet.html)
+- **Printable instructor guide:** [instructor.html](instructor.html) or [one-page PDF](print/mogtown-instructor-guide.pdf)
+- **Seven group worksheets:** [choose a group](worksheet.html) or [all seven versions as a PDF](print/mogtown-seven-group-worksheets.pdf)
 - **Public facilitator guide:** [FACILITATOR_GUIDE.md](FACILITATOR_GUIDE.md)
 
 ## Run a class
@@ -29,11 +29,13 @@ MogTown is a mobile-first classroom simulation for undergraduate Accounting Info
 
 Allow 5 minutes for login, 5 minutes for recommendation preparation, and 20–30 minutes for the hearing and final reveal. PrimeEra AI is a healthy-aging and presentation service for older consumers; comparisons across organizations require attention to different customers, product mixes, and channels.
 
-## Student sessions and worksheet notes
+## Student sessions and printable materials
 
 The selected role and successfully unlocked rounds are restored after a refresh in the same browser tab using session storage. Use the game's **Switch team** control to log out before giving the device to a different team. A new tab or browser may require the codes again; browser session restoration behavior can vary. If session storage is unavailable, play can continue in the current page, but a refresh may lose progress.
 
-The worksheet can be printed blank or filled in before printing / saving as PDF. Its typed notes exist only in that page and are not saved across refreshes. The instructor console contains no built-in codes; it shows only a code the instructor manually enters, clears it on activity changes or navigation, and does not save it.
+The instructor page is a concise, one-page guide to group allocation, timing, round releases, and facilitation. It replaces the timer console. Choose an organization on the worksheet page to print its two-page version, or print all seven groups together (14 pages). Each version includes role-specific instructions and empty boxes for handwritten answers. The worksheets refer to evidence released in the game and contain no answers, private codes, or unreleased numerical evidence.
+
+Both pages use simple black text and borders on white paper, with Calibri as the preferred font. The downloadable PDFs embed Calibri for consistent printing on other devices. Print on Letter paper at 100% scale, or fit to page for A4. When printing the HTML pages, turn off the browser's headers and footers. The PDF worksheet pack follows the group order above: pages 1-2 for GlowLab through pages 13-14 for the Mayor's Economic Council.
 
 ## Local preview
 
@@ -73,7 +75,9 @@ Private role and future-round payloads use AES-GCM with browser-native Web Crypt
 - `data/manifest.json` — public role names and payload paths.
 - `data/common/round1.json` — opening public TrendTok content.
 - `data/common/*.enc.json`, `data/roles/*.enc.json` — encrypted updates and confidential role content.
-- `worksheet.html` — responsive editable worksheet with a white print layout.
-- `instructor.html`, `instructor.css`, `instructor.js` — optional timer and manual code display.
+- `worksheet.html`, `worksheet.js`, `worksheet-prompts.json` — seven printable group versions with empty answer boxes.
+- `instructor.html`, `instructor.css`, `instructor.js` — concise printable facilitation instructions.
+- `print.css` — shared Calibri, black-and-white print layout.
+- `print/*.pdf` — one-page instructor guide and 14-page worksheet pack with embedded Calibri.
 - `FACILITATOR_GUIDE.md` — public, spoiler-free facilitation instructions.
 - `instructor/` — ignored private teaching and maintenance materials.

@@ -7,9 +7,9 @@ This public guide contains no private codes or unreleased clues. The local ignor
 ## Prepare
 
 - Assign one organization to each team. TrendTok is everyone's shared feed, not an eighth organization.
-- Use one phone or computer per team. Have a calculator and the [team worksheet](worksheet.html) available.
+- Use one phone or computer per team and a calculator. Print the matching two-page version from the [seven group worksheets](worksheet.html), or use the [complete worksheet PDF](print/mogtown-seven-group-worksheets.pdf).
 - Distribute each private role code separately from your local instructor kit. Keep future round and final codes for release during class.
-- Open [hearing control](instructor.html) for an optional timer and manual shared-code display. It does not unlock student devices or validate entered codes.
+- Print the [one-page instructor instructions](instructor.html) for the group allocation and stage-by-stage plan. Use a classroom clock to manage the suggested timings.
 - Test the game over HTTPS or a local HTTP server, never by opening `index.html` directly as a file.
 
 ## Establish the Truth Rule
@@ -63,4 +63,4 @@ Score each area from 0–2: accurate use of evidence, separation of facts and ca
 
 A refresh in the same tab restores the role and unlocked rounds when session storage is available. If a team loses progress, privately reissue its role code and the shared codes already released. Use **Switch team** to log out before transferring a device between teams.
 
-Typed worksheet notes are not saved; print or save as PDF before refreshing that page. The timer and manual code panel also reset on refresh. If a code fails, check the selected role or next round and ask the team to re-enter the code exactly. Do not post the entire instructor code sheet to solve a single login issue.
+Students write answers in the printed worksheet boxes; the worksheet page does not store responses. If a code fails, check the selected role or next round and ask the team to re-enter the code exactly. Do not post the entire instructor code sheet to solve a single login issue.

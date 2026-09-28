@@ -1,0 +1,72 @@
+[
+  {
+    "id": "glowlab",
+    "name": "GlowLab",
+    "mission": "Protect sustainable growth while assessing the costs and customer outcomes of GlowLab’s acquisition strategy.",
+    "round1": "Describe changes in sales, marketing spending and customer activity. Calculate growth rates using your released dashboard and identify a pattern that needs investigation.",
+    "round2": "Investigate whether acquisition channels help explain performance. Compare released evidence, consider customer differences, and identify a comparison that could strengthen a causal claim.",
+    "round3": "Use your released scenario to calculate sales value kept after returns under each assumption and the difference. Explain why retained sales value is not profit.",
+    "round4": "Recommend how GlowLab should allocate its available resources. Explain the growth and cost trade-off, and choose KPIs for marketing efficiency and customer outcomes.",
+    "final": "Does the new evidence change your resource allocation or recommendation? Identify the evidence and explain your reasoning."
+  },
+  {
+    "id": "jawmax",
+    "name": "JawMax Labs",
+    "mission": "Assess JawMax’s product and customer experience using evidence, and recommend a proportionate response.",
+    "round1": "Describe changes in units, sales, returns and support demand. Calculate growth rates and compare how quickly these measures changed.",
+    "round2": "Investigate competing explanations for customer complaints and returns. Distinguish reported experiences from verified findings, check denominators, and identify evidence needed before attributing a cause.",
+    "round3": "Use your released scenario to calculate the change in creator-channel units, total units and gross sales. State the assumptions about other customers and prices.",
+    "round4": "Recommend a response to JawMax’s customer and product concerns. Explain its costs and limits, and choose separate KPIs for product quality and customer experience.",
+    "final": "Does the new evidence change your proposed product or customer response? Explain which evidence matters and whether it supports your earlier reasoning."
+  },
+  {
+    "id": "mirrorai",
+    "name": "MirrorAI",
+    "mission": "Evaluate MirrorAI’s recommendations and commercial incentives while distinguishing useful prediction from causal claims.",
+    "round1": "Describe changes in users, recommendation clicks, affiliate revenue and products shown. Calculate growth rates and check whether the reporting periods are comparable.",
+    "round2": "Investigate the relationship between user characteristics and purchasing. Offer an alternative explanation and propose a test of whether MirrorAI’s design changes behavior.",
+    "round3": "Use your released scenario to calculate purchasing users in each group, the revised total and the change. Explain the assumptions about recommendation exposure and purchasing behavior.",
+    "round4": "Recommend a product-design or disclosure action. Explain the trade-off between commercial performance and user outcomes, and choose KPIs that assess both.",
+    "final": "Does the new evidence change your design recommendation or proposed test? Explain how it affects your assessment of user outcomes."
+  },
+  {
+    "id": "primeera",
+    "name": "PrimeEra AI",
+    "mission": "Represent PrimeEra’s healthy-aging and presentation approach while evaluating comparisons fairly and acknowledging its commercial incentives.",
+    "round1": "Describe PrimeEra’s users, purchases and customer outcomes. Calculate comparisons with the public dashboard and state what those comparisons alone cannot establish.",
+    "round2": "Investigate explanations for differences between PrimeEra and other organizations. Identify possible confounders and design a fairer comparison using comparable customers, products or channels.",
+    "round3": "Use your released scenario to calculate forecast users, purchasing users, gross order value and kept sales under each return assumption. Compare the results and explain their limits.",
+    "round4": "Recommend an evidence-based policy or company action. Explain PrimeEra’s commercial interests, a trade-off, and KPIs that permit fair comparisons across customer groups.",
+    "final": "Does the new evidence change PrimeEra’s recommendation or its comparison with other organizations? Explain the adjustment and any remaining uncertainty."
+  },
+  {
+    "id": "clouthouse",
+    "name": "CloutHouse",
+    "mission": "Protect a viable creator-marketing channel while evaluating campaign performance and responsible promotional practices.",
+    "round1": "Describe changes in creator-coded sales, commissions and creator activity. Calculate growth rates and examine how sales are distributed across creators.",
+    "round2": "Investigate whether campaign practices help explain differences in customer outcomes. Consider audience and product differences, and identify evidence needed for a stronger causal conclusion.",
+    "round3": "Use your released scenario to calculate affected creator sales, the sales reduction and revised total sales. State the assumptions linking traffic to purchases.",
+    "round4": "Recommend a creator or campaign policy. Explain the trade-off between channel revenue and customer outcomes, and choose KPIs for campaign performance and compliance.",
+    "final": "Does the new evidence change your campaign policy or recommendation? Explain what it suggests about customer outcomes and the information still needed."
+  },
+  {
+    "id": "consumer",
+    "name": "MogTown Consumer Protection Agency",
+    "mission": "Identify preventable consumer harm using reliable evidence, balancing how often problems occur with how serious they are.",
+    "round1": "Describe changes in complaints, orders and reported concerns. Calculate complaint growth and complaints per order, and distinguish complaint records from social-media posts.",
+    "round2": "Investigate which consumer problems warrant attention. Check categories and denominators, distinguish frequency from visibility, and identify evidence needed to assess severity and underlying causes.",
+    "round3": "Use your released scenario to forecast complaints from order growth and the assumed complaint rate. Explain how reporting behavior or operational changes could alter the result.",
+    "round4": "Choose focused enforcement priorities within your released capacity. Explain the trade-off between reach and intensity, and specify outcome and compliance KPIs.",
+    "final": "Does the new evidence change your enforcement priorities? Explain how it affects your assessment of frequency, severity or preventable harm."
+  },
+  {
+    "id": "mayor",
+    "name": "Mayor’s Economic Council",
+    "mission": "Combine stakeholders’ evidence to balance consumer welfare, employment, public revenue and the industry’s financial health.",
+    "round1": "Describe changes in employment, tax revenue, margins and working capital. Calculate useful comparisons and identify tensions between economic growth and financial performance.",
+    "round2": "Use the released cost bridge to reconcile revenue and profit changes. Combine other teams’ evidence, distinguish accounting explanations from underlying causes, and identify missing causal evidence.",
+    "round3": "Use your released scenario to forecast sales and profit under each margin assumption. Compare the outcomes and distinguish percentage-point changes from percent changes.",
+    "round4": "Recommend a targeted city response using other teams’ evidence. Explain the economic and consumer trade-offs, select KPIs, and state when to revise the intervention.",
+    "final": "Does the new evidence change the city’s recommendation? Explain which stakeholder evidence changes your priorities and how you would monitor the decision."
+  }
+]

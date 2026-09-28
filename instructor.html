@@ -1,49 +1,30 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="color-scheme" content="dark">
-  <title>Hearing control · MogTown</title>
-  <link rel="stylesheet" href="instructor.css">
-  <script src="instructor.js" defer></script>
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>MogTown · Instructor instructions</title><link rel="stylesheet" href="instructor.css"><script src="instructor.js" defer></script></head>
 <body>
-  <a class="skip" href="#controls">Skip to hearing controls</a>
-  <header class="topbar"><a class="brand" href="index.html">MOGTOWN<span>HEARING CONTROL</span></a><nav aria-label="Instructor navigation"><a href="worksheet.html" target="_blank" rel="noopener">Team worksheet ↗</a><a href="FACILITATOR_GUIDE.md">Facilitator guide</a></nav></header>
-  <main id="controls">
-    <div class="eyebrow">The city is listening.</div>
-    <h1>Run the hearing.</h1>
-    <p class="intro">Keep every team on the same round. This console is a timer and presentation aid; students enter each code on their own devices.</p>
-    <div class="console-grid">
-      <section class="card stage-card" aria-labelledby="stageHeading">
-        <div class="card-label">01 / Set the stage</div>
-        <label for="stage">Current activity</label>
-        <select id="stage"><option value="1">Round 1 · Descriptive</option><option value="2">Round 2 · Diagnostic</option><option value="3">Round 3 · Predictive</option><option value="4">Round 4 · Prescriptive</option><option value="final">Final hearing & reveal</option><option value="briefing">60-second team briefing</option></select>
-        <h2 id="stageHeading">What happened?</h2>
-        <p id="stagePrompt">Record three observations, two calculations, one strange pattern, and one unanswered question. Describe the evidence before proposing causes.</p>
-        <p class="tip" id="stageTip">Round 1 opens with the team's private role code. Distribute those privately.</p>
-        <p class="small">Changing activity resets the timer and clears the displayed code. It does not unlock a student's game.</p>
-      </section>
-      <section class="card timer-card" aria-labelledby="timerHeading">
-        <div class="card-label" id="timerHeading">02 / Keep time</div>
-        <div id="timer" class="timer" role="timer" aria-label="Time remaining" aria-live="off">10:00</div>
-        <p class="timer-status" id="timerStatus" role="status" aria-live="polite" aria-atomic="true">Ready when you are.</p>
-        <div class="button-row"><button id="toggleTimer" type="button">Start timer</button><button id="resetTimer" type="button" class="secondary">Reset</button></div>
-        <form id="durationForm" class="duration-form"><div><label for="minutes">Duration in minutes</label><input id="minutes" type="number" inputmode="numeric" min="1" max="120" step="1" value="10" required></div><button type="submit" class="secondary">Set duration</button></form>
-      </section>
-      <section class="card code-card" aria-labelledby="codeHeading">
-        <div class="card-label">03 / Release when ready</div>
-        <h2 id="codeHeading">Put the next code on screen.</h2>
-        <p>No secret codes are built into this page. Copy the current shared round or final code from your private instructor file. Use this panel only when the class should see it.</p>
-        <form id="codeForm"><label for="manualCode">Shared release code</label><div class="code-entry"><input id="manualCode" type="password" autocomplete="off" spellcheck="false" autocapitalize="none" maxlength="80" placeholder="Enter the code to display" aria-describedby="codeNote"><button type="submit">Display code</button></div></form>
-        <p class="small" id="codeNote">Use shared round codes here. Give each team's role code privately. This page does not save entered codes.</p>
-        <div id="codeDisplay" class="code-display" hidden><p id="codeLabel" class="eyebrow">Release code</p><output id="presentedCode" aria-labelledby="codeLabel"></output><button id="hideCode" type="button" class="secondary">Hide & clear code</button></div>
-        <p id="codeStatus" role="status" aria-live="polite" class="small"></p>
-      </section>
-    </div>
-    <aside class="truth"><strong>MogTown Truth Rule</strong><p>Teams may frame or selectively disclose unlocked evidence. They may never invent data or contradict an unlocked metric. Direct questions about unlocked metrics require truthful answers.</p></aside>
-    <footer>Seven organizations. One shared TrendTok feed. Four ways to ask better questions.</footer>
+  <nav class="toolbar" aria-label="Instructor resources"><h1>Instructor instructions</h1><p>A one-page guide for running the seven-group classroom activity.</p><div class="toolbar-links"><a href="index.html">Back to the game</a><a href="worksheet.html">Group worksheets</a><a href="print/mogtown-instructor-guide.pdf" download>Download instructor PDF (1 page)</a><a href="print/mogtown-seven-group-worksheets.pdf" download>Download all worksheets (14 pages)</a></div><div class="toolbar-actions"><button id="printInstructor" type="button">Print instructions</button></div></nav>
+  <main class="print-document">
+    <article class="print-page instructor-page" aria-labelledby="guideTitle">
+      <header class="page-header"><div class="page-heading-row"><h1 id="guideTitle">MogTown · Instructor instructions</h1><span class="page-count">80-minute class</span></div><p>Seven teams investigate why sales are rising while profits fall. Every team completes all four analytics rounds; TrendTok is the shared news feed, not an eighth team.</p></header>
+      <div class="setup-groups"><section><h2>1. Organize the class</h2><ol><li>Divide the class into seven roughly equal groups. Give each group its matching worksheet and private role code. Use one phone or computer and a calculator per group.</li>
+<li>Assign an analyst, recorder, spokesperson, and questioner within each group. Combine jobs in smaller groups; share analysis in larger groups.</li>
+<li>Students choose their assigned organization and enter its code. Check that everyone can see the briefing and Round 1 before starting.</li></ol></section><section><h2>Seven group assignments</h2><table class="group-list" aria-label="Group assignments"><tbody><tr><td>1</td><td><strong>GlowLab</strong>Products, growth, and profitability</td></tr>
+<tr><td>2</td><td><strong>JawMax Labs</strong>Product performance and customer experience</td></tr>
+<tr><td>3</td><td><strong>MirrorAI</strong>Recommendations and customer decisions</td></tr>
+<tr><td>4</td><td><strong>PrimeEra AI</strong>Healthy aging and presentation</td></tr>
+<tr><td>5</td><td><strong>CloutHouse</strong>Creators and marketing</td></tr>
+<tr><td>6</td><td><strong>Consumer Protection Agency</strong>Complaints and consumer welfare</td></tr>
+<tr><td>7</td><td><strong>Mayor&#39;s Economic Council</strong>The economy and public policy</td></tr></tbody></table></section></div>
+      <section><h2>2. Run the activity in order</h2><table class="schedule"><thead><tr><th scope="col">Stage</th><th scope="col">Min.</th><th scope="col">Instructor action</th></tr></thead><tbody><tr><td>Setup</td><td>5</td><td>Allocate groups, materials, and jobs. Distribute role codes privately; confirm successful logins.</td></tr>
+<tr><td>1 &#183; Descriptive</td><td>10</td><td>Ask what happened. Teams record 3 observations, 2 calculations, 1 strange pattern, and 1 unanswered question. Stop premature causal claims.</td></tr>
+<tr><td>2 &#183; Diagnostic</td><td>15</td><td>Release Round 2. Teams propose a hypothesis, supporting evidence, an alternative explanation, and missing causal evidence. Allow 60 seconds per team and one brief cross-question.</td></tr>
+<tr><td>3 &#183; Predictive</td><td>12</td><td>Release Round 3. Teams calculate the forecast and state an assumption, key driver, and what could make it wrong.</td></tr>
+<tr><td>4 &#183; Prescriptive</td><td>13</td><td>Release Round 4. Teams recommend an action with evidence, expected result, trade-off, and 2–3 KPIs. Allow justified custom proposals.</td></tr>
+<tr><td>Prepare</td><td>5</td><td>Teams prepare a concise recommendation and identify their strongest evidence and main uncertainty.</td></tr>
+<tr><td>Hearing &amp; final reveal</td><td>20</td><td>Hear every recommendation before releasing the final code. Teams then explain whether their recommendation changes and which new evidence prompted the update.</td></tr></tbody></table></section>
+      <p class="truth-rule"><strong>Truth Rule: Teams may selectively disclose and frame unlocked evidence. They must not invent data or contradict an unlocked metric. Answer direct questions about unlocked metrics truthfully.</strong></p>
+      <p class="closing">Release shared codes in order; students enter them on their own devices. Collect worksheets. Evaluate evidence accuracy, fact versus inference, forecast assumptions, and decisions with trade-offs, KPIs, and evidence-based updates.</p>
+    </article>
   </main>
 </body>
 </html>

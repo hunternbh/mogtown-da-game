@@ -1,95 +1,15 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="color-scheme" content="dark light">
-  <title>Team evidence sheet · MogTown</title>
-  <style>
-    *{box-sizing:border-box}body{margin:0;background:#0c101b;color:#f3f5ff;font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:#89eef5}button,a{touch-action:manipulation}button{font:inherit;font-weight:750;padding:12px 20px;background:#91f1f5;border:0;border-radius:10px;color:#10202a;cursor:pointer}a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid #f7a1d4;outline-offset:4px}.toolbar{max-width:1000px;margin:auto;padding:24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.toolbar p{margin:8px 0 0;color:#aebbd2;max-width:640px;font-size:.86rem}.skip{position:absolute;top:-100px;left:12px;z-index:2;padding:12px;background:#132338}.skip:focus{top:12px}main{max-width:1000px;margin:auto;padding:0 24px 40px}.page{border:1px solid #35405c;border-radius:18px;padding:28px;background:#121a2b;margin-bottom:24px}.eyebrow{font-weight:800;color:#91f1f5;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase}h1{font-size:clamp(1.7rem,5vw,2.5rem);line-height:1.08;margin:9px 0 14px;letter-spacing:-.045em}h2{font-size:1.2rem;margin:22px 0 4px}h2 span{color:#91f1f5}.hint{color:#b4c1d8;margin:0 0 12px;font-size:.87rem}.truth{border-left:3px solid #f3a1d4;padding:9px 13px;background:#201d34;font-size:.82rem;margin:16px 0}.meta,.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.meta{margin:16px 0}label{display:block;font-size:.86rem;font-weight:700}input,textarea{display:block;width:100%;margin-top:6px;color:inherit;background:#0c1220;border:1px solid #4c5c7b;border-radius:8px;font-family:inherit;padding:10px;min-width:0}input{height:44px;font-size:.92rem}textarea{resize:vertical;min-height:96px;font-size:.92rem;line-height:1.45}.field{min-width:0}.field.wide{grid-column:1/-1}.field small{font-weight:400;color:#b4c1d8;display:block}.print-answer{display:none;white-space:pre-wrap;overflow-wrap:anywhere}.page-number{font-size:.72rem;color:#99a8c3;margin:18px 0 0}.footer-note{font-size:.8rem;color:#b4c1d8;margin-top:16px}@media(max-width:540px){main{padding:0 12px 20px}.toolbar{padding:20px 16px}.page{padding:18px}.meta,.grid{grid-template-columns:1fr}.field.wide{grid-column:auto}h2{line-height:1.3}textarea{min-height:104px}}
-    @page{size:auto;margin:12mm}
-    @media print{html{color-scheme:light}body{background:#fff;color:#111;font-size:9pt;line-height:1.3}.toolbar,.skip{display:none}main{max-width:none;padding:0}.page{border:0;border-radius:0;margin:0;padding:0;background:#fff;break-after:page}.page:last-child{break-after:auto}.eyebrow{color:#333;font-size:7pt}h1{font-size:22pt;margin:4px 0 7px}h2{font-size:12pt;margin:12px 0 4px}h2 span,.hint,.field small,.footer-note,.page-number{color:#333}.hint{font-size:8pt;margin-bottom:7px}.truth{border:1px solid #777;border-left:3px solid #333;background:none;padding:6px 8px;margin:9px 0;font-size:8pt}.meta,.grid{grid-template-columns:1fr 1fr;gap:7px}.meta{margin:9px 0}label{font-size:8.5pt}.field{break-inside:avoid}.field.wide{grid-column:1/-1}.field small{font-size:7pt}input,textarea{display:none}.print-answer{display:block;min-height:18mm;border:1px solid #888;margin-top:4px;padding:5px;font-size:9pt;font-weight:400}.meta .print-answer{min-height:9mm}.field.short .print-answer{min-height:14mm}.field.tall .print-answer{min-height:23mm}.footer-note{font-size:7.5pt;margin-top:8px}.page-number{font-size:7pt;margin-top:8px}}
-  </style>
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>MogTown · Group worksheets</title><link rel="stylesheet" href="print.css"><script src="worksheet.js" defer></script></head>
 <body>
-  <a class="skip" href="#worksheet">Skip to worksheet</a>
-  <nav class="toolbar" aria-label="Worksheet navigation">
-    <div><a href="index.html">← Back to MogTown</a><p>Type your notes, or print a blank sheet. Notes stay in this page only; print or save to PDF before closing or refreshing. Long answers may use extra pages.</p></div>
-    <button id="printButton" type="button">Print / save PDF</button>
+  <nav class="toolbar" aria-label="Worksheet controls">
+    <h1>Group worksheets</h1>
+    <p>Choose a group and print its two-page worksheet. Every answer box is blank for handwriting. All seven groups complete all four rounds.</p>
+    <div class="toolbar-links"><a href="index.html">Back to the game</a><a href="instructor.html">Instructor instructions</a><a href="print/mogtown-seven-group-worksheets.pdf" download>Download all worksheets (14 pages)</a><a href="print/mogtown-instructor-guide.pdf" download>Download instructor PDF (1 page)</a></div>
+    <div class="toolbar-actions"><label for="worksheetRole">Group</label><select id="worksheetRole" aria-controls="worksheets" disabled><option>Loading groups…</option></select><button id="printSelected" type="button" disabled>Print this group (2 pages)</button><button id="printAll" type="button" disabled>Print all 7 groups (14 pages)</button></div>
+    <p id="worksheetStatus" class="status" role="status" aria-live="polite">Loading worksheets…</p>
   </nav>
-  <main id="worksheet">
-    <section class="page" aria-labelledby="sheetTitle">
-      <div class="eyebrow">MogTown / Team evidence sheet</div>
-      <h1 id="sheetTitle">Follow the evidence.</h1>
-      <p class="hint">Why are sales exploding while profits are falling? Label what you know, what you infer, and what you still need.</p>
-      <div class="meta">
-        <label>Organization<input name="organization" autocomplete="off"><span class="print-answer" aria-hidden="true"></span></label>
-        <label>Members / date<input name="members" autocomplete="off"><span class="print-answer" aria-hidden="true"></span></label>
-      </div>
-      <p class="truth"><strong>MogTown Truth Rule:</strong> You may frame or selectively disclose unlocked evidence. Never invent numbers or contradict an unlocked metric. Answer direct questions about an unlocked metric truthfully.</p>
-      <section aria-labelledby="r1">
-        <h2 id="r1"><span>01 /</span> Descriptive · What happened?</h2>
-        <p class="hint">Report facts first. Do not claim causes yet. Include a source, period, and units.</p>
-        <div class="grid">
-          <label class="field tall">Three observations<textarea name="observations" aria-label="Round 1: Three observations"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-          <label class="field tall">Two calculations<small>Show inputs, working, and units.</small><textarea name="calculations" aria-label="Round 1: Two calculations"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-          <label class="field short">One strange pattern<textarea name="pattern" aria-label="Round 1: One strange pattern"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-          <label class="field short">One unanswered question<textarea name="question" aria-label="Round 1: One unanswered question"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-        </div>
-      </section>
-      <section aria-labelledby="r2">
-        <h2 id="r2"><span>02 /</span> Diagnostic · Why might it happen?</h2>
-        <p class="hint">A relationship is a clue, not proof of causation. Consider confounding and alternative explanations.</p>
-        <div class="grid">
-          <label class="field">Our hypothesis<textarea name="hypothesis" aria-label="Round 2: Our hypothesis"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-          <label class="field">Supporting evidence<small>Whose data? What metric?</small><textarea name="support" aria-label="Round 2: Supporting evidence"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-          <label class="field">An alternative explanation<textarea name="alternative" aria-label="Round 2: Alternative explanation"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-          <label class="field">Missing causal evidence<textarea name="causal" aria-label="Round 2: Missing causal evidence"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-          <label class="field short">60-second briefing<small>One hypothesis, one fact, one uncertainty.</small><textarea name="briefing" aria-label="Round 2: 60-second briefing"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-          <label class="field short">Our cross-question<small>Ask a team for a metric that tests your hypothesis.</small><textarea name="crossquestion" aria-label="Round 2: Cross-question"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-        </div>
-      </section>
-      <p class="page-number">EVIDENCE SHEET / 01 — Continue with forecasts and decisions on the next page.</p>
-    </section>
-    <section class="page" aria-labelledby="decisionTitle">
-      <div class="eyebrow">MogTown / From evidence to action</div>
-      <h1 id="decisionTitle">Make a decision. Stay curious.</h1>
-      <section aria-labelledby="r3">
-        <h2 id="r3"><span>03 /</span> Predictive · What is likely next?</h2>
-        <p class="hint">Use your unlocked scenario. A forecast is conditional on its assumptions.</p>
-        <div class="grid">
-          <label class="field tall">Forecast result / calculation<small>Show working and units.</small><textarea name="forecast" aria-label="Round 3: Forecast calculation"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-          <label class="field tall">Key assumption<textarea name="assumption" aria-label="Round 3: Key assumption"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-          <label class="field short">The most important driver<textarea name="driver" aria-label="Round 3: Most important driver"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-          <label class="field short">What could make it wrong?<textarea name="uncertainty" aria-label="Round 3: What could make the forecast wrong"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-        </div>
-      </section>
-      <section aria-labelledby="r4">
-        <h2 id="r4"><span>04 /</span> Prescriptive · What should we do?</h2>
-        <p class="hint">Choose a menu action or a justified custom proposal. Consider who benefits, who pays, and how you would learn.</p>
-        <div class="grid">
-          <label class="field">Recommended action<textarea name="action" aria-label="Round 4: Recommended action"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-          <label class="field">Evidence behind our action<textarea name="actionEvidence" aria-label="Round 4: Evidence behind the action"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-          <label class="field">Expected result<textarea name="result" aria-label="Round 4: Expected result"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-          <label class="field">Trade-off / risk<textarea name="tradeoff" aria-label="Round 4: Trade-off or risk"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-          <label class="field wide">Two or three KPIs to monitor<small>Define the metric, comparison, and when to review it.</small><textarea name="kpis" aria-label="Round 4: KPIs to monitor"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-        </div>
-      </section>
-      <section aria-labelledby="reveal">
-        <h2 id="reveal"><span>05 /</span> Final reveal · Update your view.</h2>
-        <label class="field wide">Does your recommendation change? What new evidence caused the change?<small>If it stays the same, explain why the new evidence supports it.</small><textarea name="revision" aria-label="Final reveal: Does your recommendation change and why"></textarea><span class="print-answer" aria-hidden="true"></span></label>
-      </section>
-      <p class="footer-note">Before the hearing: separate fact from inference · state forecast assumptions · distinguish prevalence from viral attention · acknowledge trade-offs.</p>
-      <p class="page-number">EVIDENCE SHEET / 02 — A strong decision can change when the evidence changes.</p>
-    </section>
-  </main>
-  <script>
-    // Worksheet notes stay in the current document; no storage or network calls.
-    const fields = document.querySelectorAll('input, textarea');
-    function syncPrint() { fields.forEach(field => { field.nextElementSibling.textContent = field.value; }); }
-    fields.forEach(field => field.addEventListener('input', syncPrint));
-    window.addEventListener('beforeprint', syncPrint);
-    document.getElementById('printButton').addEventListener('click', () => { syncPrint(); window.print(); });
-  </script>
+  <main id="worksheets" class="print-document" aria-label="Printable group worksheets"></main>
+  <noscript><p>Enable JavaScript to choose a group, or use the PDF download above.</p></noscript>
 </body>
 </html>
