@@ -1,0 +1,5 @@
+instructor/
+.DS_Store
+**/instructor-secrets.txt
+work/
+outputs/

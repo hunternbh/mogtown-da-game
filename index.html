@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1017">
+  <title>MogTown — The Emergency Hearing</title>
+  <meta name="description" content="Seven organizations. Different evidence. One city-wide decision. A social-deduction data analytics classroom game.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the game</a>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="MogTown home"><span class="brand-mark" aria-hidden="true">M</span>MOGTOWN<span class="brand-sub">THE HEARING</span></a>
+    <div class="session-tools"><span class="status-pill" id="sessionStatus">AWAITING YOUR TEAM</span><button class="text-button hidden" id="logoutBtn" type="button">Switch team</button></div>
+  </header>
+  <main class="shell" id="main">
+    <section class="hero" id="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> AN EMERGENCY HEARING · 2027</p>
+        <h1 id="heroTitle">Everyone’s <br>glowing.<br><em>What’s the <br>real cost?</em></h1>
+        <p class="lede">The looks economy is booming. Sales are up. Profits are down. Your team holds one piece of the story.</p>
+        <div class="hero-meta"><span><b>07</b> organizations</span><span><b>04</b> rounds</span><span><b>01</b> city to save</span></div>
+      </div>
+      <div class="hero-art">
+        <img src="assets/main.png" width="1448" height="1086" alt="The seven MogTown representatives gather in the town square beneath the TrendTok screen." fetchpriority="high">
+        <div class="art-caption"><span class="live-dot">● DEVELOPING STORY</span><span>MOGTOWN CITY SQUARE</span></div>
+        <div class="headline-sticker"><span>THE CENTRAL MYSTERY</span><strong>Sales are exploding.<br>Why is profit falling?</strong></div>
+      </div>
+    </section>
+    <section class="panel access-panel" id="loginPanel" aria-labelledby="accessTitle">
+      <div class="access-layout">
+        <div class="access-main">
+          <div class="panel-head"><div><p class="eyebrow">YOUR SEAT AT THE TABLE</p><h2 id="accessTitle">Enter the hearing.</h2></div><span class="file-marker" aria-hidden="true">01 / ACCESS</span></div>
+          <p class="intro">One phone per team. Choose your organization, then open the briefing with your private code.</p>
+          <form id="loginForm" novalidate>
+            <label for="roleSelect">Your organization</label>
+            <select id="roleSelect" aria-describedby="roleHelp"><option value="">Loading organizations…</option></select>
+            <p class="field-help" id="roleHelp">Use the organization assigned by your instructor.</p>
+            <label for="roleCode">Private team code</label>
+            <input id="roleCode" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Enter your team’s code" aria-describedby="loginMessage">
+            <button class="primary" id="loginBtn" type="submit">Open confidential briefing <span aria-hidden="true">↗</span></button>
+            <p class="message" id="loginMessage" aria-live="polite" aria-atomic="true"></p>
+          </form>
+          <p class="access-note"><span aria-hidden="true">⌑</span> Your evidence is private. The TrendTok feed is shared.</p>
+        </div>
+        <div class="preview-stage">
+          <div class="preview-placeholder"><div class="seat-number" aria-hidden="true">07<span>SEATS.<br>DIFFERENT PERSPECTIVES.</span></div><p>Pick your organization.<br><strong>Meet your side of the story.</strong></p><div class="preview-colors" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div id="rolePreview" class="role-preview hidden" aria-live="polite"><img id="rolePreviewImage" alt="" width="1122" height="1402"><div class="preview-caption"><p class="eyebrow">YOUR ORGANIZATION</p><h3 id="rolePreviewName"></h3><p id="rolePreviewDescription"></p></div></div>
+        </div>
+      </div>
+      <div class="entry-rules"><span><b>Read the evidence.</b> Separate facts from theories.</span><span><b>Make your case.</b> Never invent a number.</span><span><b>Stay open.</b> New evidence can change your mind.</span></div>
+    </section>
+    <section id="game" class="hidden" aria-label="Your hearing workspace">
+      <p id="sessionMessage" class="message" aria-live="polite" aria-atomic="true"></p>
+      <section class="role-banner panel confidential" aria-labelledby="roleName">
+        <div class="role-portrait"><img id="roleAvatar" alt="" width="1122" height="1402"><span>YOUR DELEGATION</span></div>
+        <div class="role-copy"><p class="tag"><span aria-hidden="true">⌑</span> CONFIDENTIAL · YOUR ORGANIZATION ONLY</p><h2 id="roleName" tabindex="-1"></h2><p id="roleBrief"></p><div class="mission" id="roleMission"></div></div>
+      </section>
+      <section class="feed panel public" aria-labelledby="feedTitle">
+        <div class="panel-head"><div><p class="tag">PUBLIC · EVERY TEAM SEES THIS</p><h2 class="feed-title" id="feedTitle"><span class="trend-icon" aria-hidden="true">↗</span>TrendTok <span>LIVE</span></h2></div><div class="feed-source"><span class="live-dot">● LIVE FEED</span><span>MOGTOWN / LOCAL</span></div></div>
+        <div id="trendFeed"></div><p class="feed-footnote">Shared headlines. Different perspectives. Check the evidence behind the story.</p>
+      </section>
+      <div class="round-section-label"><p class="eyebrow">THE HEARING, ROUND BY ROUND</p><span>Unlocked by your instructor</span></div>
+      <nav class="round-nav" aria-label="Hearing rounds">
+        <button class="round-tab active" data-round="1" type="button" aria-current="step"><span class="round-number">01</span><span>DESCRIBE</span></button>
+        <button class="round-tab locked" data-round="2" type="button" disabled><span class="round-number">02</span><span>DIAGNOSE</span><span class="lock-label">LOCKED</span></button>
+        <button class="round-tab locked" data-round="3" type="button" disabled><span class="round-number">03</span><span>PREDICT</span><span class="lock-label">LOCKED</span></button>
+        <button class="round-tab locked" data-round="4" type="button" disabled><span class="round-number">04</span><span>PRESCRIBE</span><span class="lock-label">LOCKED</span></button>
+        <button class="round-tab locked reveal-tab" data-round="5" type="button" disabled><span class="round-number">★</span><span>REVEAL</span><span class="lock-label">LOCKED</span></button>
+      </nav>
+      <section id="roundContent" class="panel round-content" aria-label="Current round evidence and team tasks" tabindex="-1"></section>
+      <section class="panel unlock-panel" id="unlockPanel" aria-labelledby="unlockTitle">
+        <div><p class="eyebrow">INSTRUCTOR RELEASE</p><h2 id="unlockTitle">The story isn’t over.</h2><p id="unlockHint">Wait until your instructor releases the next code.</p></div>
+        <form id="unlockForm" novalidate><label for="roundCode">Next round code</label><div class="unlock-row"><input id="roundCode" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Enter the released code" aria-describedby="unlockHint unlockMessage"><button class="secondary" id="unlockBtn" type="submit">Unlock <span aria-hidden="true">→</span></button></div><p class="message" id="unlockMessage" aria-live="polite" aria-atomic="true"></p></form>
+      </section>
+    </section>
+  </main>
+  <footer><div class="footer-brand">MOGTOWN<span>A DATA ANALYTICS SOCIAL-DEDUCTION GAME</span></div><div class="footer-links"><a href="worksheet.html" target="_blank" rel="noopener">Team worksheet <span aria-hidden="true">↗</span></a><a href="instructor.html">Instructor desk <span aria-hidden="true">↗</span></a><span>Fictional city. Real critical thinking.</span></div></footer>
+  <script src="app.js"></script>
+</body>
+</html>

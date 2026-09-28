@@ -1,0 +1,18 @@
+{
+  "roles": [
+    {"id":"glowlab","name":"GlowLab","file":"data/roles/glowlab"},
+    {"id":"jawmax","name":"JawMax Labs","file":"data/roles/jawmax"},
+    {"id":"mirrorai","name":"MirrorAI","file":"data/roles/mirrorai"},
+    {"id":"primeera","name":"PrimeEra AI","file":"data/roles/primeera"},
+    {"id":"clouthouse","name":"CloutHouse","file":"data/roles/clouthouse"},
+    {"id":"consumer","name":"MogTown Consumer Protection Agency","file":"data/roles/consumer"},
+    {"id":"mayor","name":"Mayor's Economic Council","file":"data/roles/mayor"}
+  ],
+  "common": {
+    "round1":"data/common/round1.json",
+    "round2":"data/common/round2.enc.json",
+    "round3":"data/common/round3.enc.json",
+    "round4":"data/common/round4.enc.json",
+    "final":"data/common/final.enc.json"
+  }
+}

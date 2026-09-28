@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Hearing control · MogTown</title>
+  <link rel="stylesheet" href="instructor.css">
+  <script src="instructor.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#controls">Skip to hearing controls</a>
+  <header class="topbar"><a class="brand" href="index.html">MOGTOWN<span>HEARING CONTROL</span></a><nav aria-label="Instructor navigation"><a href="worksheet.html" target="_blank" rel="noopener">Team worksheet ↗</a><a href="FACILITATOR_GUIDE.md">Facilitator guide</a></nav></header>
+  <main id="controls">
+    <div class="eyebrow">The city is listening.</div>
+    <h1>Run the hearing.</h1>
+    <p class="intro">Keep every team on the same round. This console is a timer and presentation aid; students enter each code on their own devices.</p>
+    <div class="console-grid">
+      <section class="card stage-card" aria-labelledby="stageHeading">
+        <div class="card-label">01 / Set the stage</div>
+        <label for="stage">Current activity</label>
+        <select id="stage"><option value="1">Round 1 · Descriptive</option><option value="2">Round 2 · Diagnostic</option><option value="3">Round 3 · Predictive</option><option value="4">Round 4 · Prescriptive</option><option value="final">Final hearing & reveal</option><option value="briefing">60-second team briefing</option></select>
+        <h2 id="stageHeading">What happened?</h2>
+        <p id="stagePrompt">Record three observations, two calculations, one strange pattern, and one unanswered question. Describe the evidence before proposing causes.</p>
+        <p class="tip" id="stageTip">Round 1 opens with the team's private role code. Distribute those privately.</p>
+        <p class="small">Changing activity resets the timer and clears the displayed code. It does not unlock a student's game.</p>
+      </section>
+      <section class="card timer-card" aria-labelledby="timerHeading">
+        <div class="card-label" id="timerHeading">02 / Keep time</div>
+        <div id="timer" class="timer" role="timer" aria-label="Time remaining" aria-live="off">10:00</div>
+        <p class="timer-status" id="timerStatus" role="status" aria-live="polite" aria-atomic="true">Ready when you are.</p>
+        <div class="button-row"><button id="toggleTimer" type="button">Start timer</button><button id="resetTimer" type="button" class="secondary">Reset</button></div>
+        <form id="durationForm" class="duration-form"><div><label for="minutes">Duration in minutes</label><input id="minutes" type="number" inputmode="numeric" min="1" max="120" step="1" value="10" required></div><button type="submit" class="secondary">Set duration</button></form>
+      </section>
+      <section class="card code-card" aria-labelledby="codeHeading">
+        <div class="card-label">03 / Release when ready</div>
+        <h2 id="codeHeading">Put the next code on screen.</h2>
+        <p>No secret codes are built into this page. Copy the current shared round or final code from your private instructor file. Use this panel only when the class should see it.</p>
+        <form id="codeForm"><label for="manualCode">Shared release code</label><div class="code-entry"><input id="manualCode" type="password" autocomplete="off" spellcheck="false" autocapitalize="none" maxlength="80" placeholder="Enter the code to display" aria-describedby="codeNote"><button type="submit">Display code</button></div></form>
+        <p class="small" id="codeNote">Use shared round codes here. Give each team's role code privately. This page does not save entered codes.</p>
+        <div id="codeDisplay" class="code-display" hidden><p id="codeLabel" class="eyebrow">Release code</p><output id="presentedCode" aria-labelledby="codeLabel"></output><button id="hideCode" type="button" class="secondary">Hide & clear code</button></div>
+        <p id="codeStatus" role="status" aria-live="polite" class="small"></p>
+      </section>
+    </div>
+    <aside class="truth"><strong>MogTown Truth Rule</strong><p>Teams may frame or selectively disclose unlocked evidence. They may never invent data or contradict an unlocked metric. Direct questions about unlocked metrics require truthful answers.</p></aside>
+    <footer>Seven organizations. One shared TrendTok feed. Four ways to ask better questions.</footer>
+  </main>
+</body>
+</html>

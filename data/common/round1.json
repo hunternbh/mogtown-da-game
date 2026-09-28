@@ -1,0 +1,68 @@
+{
+  "round": 1,
+  "title": "9:00 AM — The Boom",
+  "subtitle": "The city is growing. Its margins are shrinking. Describe the evidence before building a causal story.",
+  "feed": [
+    {
+      "headline": "MOGTOWN LOOKS ECONOMY +55%",
+      "body": "TrendTok finance creators celebrate another record year for the city's looksmaxxing sector."
+    },
+    {
+      "headline": "#MogMonday hits 27m daily views",
+      "body": "Looksmaxxing videos, product reviews, GlowScore screenshots and creator discount codes dominate TrendTok. A view is an exposure, not a unique customer or purchase."
+    },
+    {
+      "headline": "Consumer complaints nearly triple",
+      "body": "Reported complaints rose from 14,000 to 41,000 while orders also increased. The raw count and the complaint rate per order answer different questions."
+    },
+    {
+      "headline": "Mayor calls 4 PM emergency hearing",
+      "body": "Sales are booming, but profit, delivery performance and consumer satisfaction are moving in the opposite direction."
+    }
+  ],
+  "metrics": [
+    {
+      "label": "Industry sales",
+      "from": "$200m",
+      "to": "$310m"
+    },
+    {
+      "label": "Operating profit",
+      "from": "$32m",
+      "to": "$21m"
+    },
+    {
+      "label": "Orders",
+      "from": "1.8m",
+      "to": "3.1m"
+    },
+    {
+      "label": "Return rate",
+      "from": "11%",
+      "to": "22%"
+    },
+    {
+      "label": "Advertising + commissions",
+      "from": "$25m",
+      "to": "$53m"
+    },
+    {
+      "label": "Avg. delivery",
+      "from": "2.2 days",
+      "to": "4.6 days"
+    },
+    {
+      "label": "Complaints",
+      "from": "14,000",
+      "to": "41,000"
+    }
+  ],
+  "tasks": [
+    "Record 3 observations supported by a specific public or confidential metric.",
+    "Show 2 calculations. Label units and distinguish percent changes from percentage-point changes.",
+    "Identify 1 strange pattern in the data.",
+    "Write 1 unanswered question.",
+    "Do not claim causes yet: describe what happened."
+  ],
+  "callout": "Fictional classroom data. Opening comparisons are 2026 → 2027. Public industry sales are recognized revenue; role dashboards label gross order values separately. Return rates use orders/units, not dollars. A percentage-point change and a percent change are different."
+}
